@@ -1,0 +1,95 @@
+﻿
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теміржол қозғалысын басқару</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+
+    <header>
+        <h1>🚆 Теміржол ақпараттық жүйесі</h1>
+        <p>Пойыздардың қозғалыс кестесін басқару</p>
+    </header>
+
+    <nav>
+        <a href="#home">Басты бет</a>
+        <a href="#schedule">Қозғалыс кестесі</a>
+        <a href="#add">Пойыз қосу</a>
+    </nav>
+
+    <section class="welcome" id="home">
+        <h2>Қош келдіңіз!</h2>
+        <p>Теміржол пойыздарының қозғалыс кестесін басқару жүйесі</p>
+    </section>
+
+    <section class="statistics">
+        <div class="card">
+            <h3>Пойыздар саны</h3>
+            <p id="trainCount">5</p>
+        </div>
+
+        <div class="card">
+            <h3>Станциялар</h3>
+            <p>5</p>
+        </div>
+
+        <div class="card">
+            <h3>Жүйе мәртебесі</h3>
+            <p>Белсенді</p>
+        </div>
+    </section>
+
+    <section id="schedule">
+        <h2>Пойыздардың қозғалыс кестесі</h2>
+
+        <input type="text" id="search"
+               placeholder="Пойыз немесе станция іздеу..."
+               oninput="searchTrain()">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Пойыз</th>
+                    <th>Бағыты</th>
+                    <th>Жөнелту</th>
+                    <th>Келу</th>
+                    <th>Мәртебесі</th>
+                </tr>
+            </thead>
+
+            <tbody id="trainTable">
+            </tbody>
+        </table>
+    </section>
+
+    <section id="add">
+        <h2>Жаңа пойыз қосу</h2>
+
+        <div class="form">
+            <input type="text" id="trainNumber"
+                   placeholder="Пойыз нөмірі">
+
+            <input type="text" id="trainRoute"
+                   placeholder="Пойыз бағыты">
+
+            <input type="time" id="departure">
+
+            <input type="time" id="arrival">
+
+            <button onclick="addTrain()">Пойыз қосу</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Теміржол ақпараттық жүйесі</p>
+        <p>Бағдарламалық инженерия зертханалық жұмысы</p>
+    </footer>
+
+    <script src="Script1.js"></script>
+
+</body>
+</html>
